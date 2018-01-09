@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+<script type = "text/javascript"> 
+    function check (guess, randomnumber)
+  {
+
+    var status;
+
+    // checking validation
+    if (guess == randomnumber)
+    {
+        status = true;
+    }
+    else
+    {
+      status = false;
+    }
+
+    return status;
+  }
+
+  </script>
+  
+</head>
+<body>
+
+
+<pre>
+<script type = "text/javascript"> 
+
+var answer = false
+
+// random number generated. 
+var random_number = Math.floor((Math.random() * 100) + 1);
+
+while (answer == false)
+{
+// user's guess.
+var guess = prompt("Please guess the random number between 1 and 100: ");
+
+// function that checks guess
+var answer = check (guess, random_number);
+
+document.writeln("The guess is: " + answer);
+
+if (answer == true)
+{
+  document.writeln("The game is over.");
+}
+else if (guess > random_number)
+{
+  document.writeln("Your guessed: " + guess + ". That is is too high.");
+}
+else
+{
+ document.writeln("Your guessed: " + guess + ". That is is too low.");
+}
+
+
+}
+
+
+
+  </script>
+
+  </pre>
+  
+
+</body>
+</html>
